@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.3</title>
+</head>
+
+<body>
+    <header>
+        <h1>14.3 System survivability</h1>
+    </header>
+
+    <main>
+        <p> &nbsp;So far, I have discussed security engineering from the perspective of an application that is
+            under development. The system procurer and developer have control over all aspects of
+            the system that might be attacked. In reality, as I suggested in Figure 14.1, modern dis
+            tributed systems inevitably rely on an infrastructure that includes off-the-shelf systems
+            and reusable components that have been developed by different organizations. The secu
+            rity of these systems does not just depend on local design decisions. It is also affected by
+            the security of external applications, web services, and the network infrastructure.
+        </p>
+
+        <p> &nbsp;This means that, irrespective of how much attention is paid to security, it cannot be
+            guaranteed that a system will be able to resist external attacks. Consequently, for com
+            plex networked systems, you should assume that penetration is possible and that the
+            integrity of the system cannot be guaranteed. You should therefore think about how to
+            make the system resilient so that it survives to deliver essential services to users.
+        </p>
+
+        <p>
+            &nbsp;Survivability or resilience (Westmark, 2004) is an emergent property of a system
+            as a whole, rather than a property of individual components, which may not them
+            selves be survivable. The survivability of a system reflects its ability to continue to
+            deliver essential business or mission-critical services to legitimate users while it is
+            under attack or after part of the system has been damaged. The damage could be
+            caused by an attack or by a system failure.
+        </p>
+
+        <p>
+            &nbsp;Work on system survivability was prompted by the fact that our economic and social
+            lives are dependent on a computer-controlled critical infrastructure. This includes the
+            infrastructure for delivering utilities (power, water, gas, etc.) and, equally critically, the
+            infrastructure for delivering and managing information (telephones, Internet, postal
+            service, etc.). However, survivability is not simply a critical infrastructure issue. Any
+            organization that relies on critical networked computer systems should be concerned
+            with how its business would be affected if their systems did not survive a malicious
+            attack or catastrophic system failure. Therefore, for business critical systems, surviv
+            ability analysis and design should be part of the security engineering process.
+        </p>
+
+        <p>
+            &nbsp;Maintaining the availability of critical services is the essence of survivability.
+            This means that you have to know:
+        </p>
+
+        <ul>
+            <li><p>the system services that are the most critical for a business;</p></li>
+            <li><p>the minimal quality of service that must be maintained;</p></li>
+            <li><p>how these services might be compromised;</p></li>
+            <li><p>how these services can be protected;</p></li>
+            <li><p>how you can recover quickly if the services become unavailable.</p></li>
+        </ul>
+
+        <p>
+            &nbsp;For example, in a system that handles ambulance dispatch in response to emergency
+            calls, the critical services are those concerned with taking calls and dispatching ambu
+            lances to the medical emergency. Other services, such as call logging and ambulance
+            location management, are less critical, either because they do not require real-time pro
+            cessing or because alternative mechanisms may be used. For example, to find an ambu
+            lance’s location you can call the ambulance crew and ask them where they are.
+        </p>
+
+        <p>
+            &nbsp;Ellison and colleagues (1999a; 1999b; 2002) have designed a method of analysis
+            called Survivable Systems Analysis. This is used to assess vulnerabilities in systems
+            and to support the design of system architectures and features that promote system
+            survivability. They argue that achieving survivability depends on three complemen
+            tary strategies:
+        </p>
+
+        <ol>
+            <li>
+                <p><em>Resistance</em> Avoiding problems by building capabilities into the system to repel
+                    attacks. For example, a system may use digital certificates to authenticate users,
+                    thus making it more difficult for unauthorized users to gain access.
+                </p>
+            </li>
+
+            <li>
+                <p><em>Recognition</em> Detecting problems by building capabilities into the system to detect
+                    attacks and failures and assess the resultant damage. For example, checksums may
+                    be associated with critical data so that corruptions to that data can be detected.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <em>Recovery</em> Tolerating problems by building capabilities into the system to deliver
+                    essential services while under attack, and to recover full functionality after an attack. For
+                    example, fault tolerance mechanisms using diverse implementations
+                    of the same functionality may be included to cope with a loss of service from
+                    one part of the system.
+                </p>
+            </li>
+        </ol>
+    </main>
+</body>
+
+</html>
