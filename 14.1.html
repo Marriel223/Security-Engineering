@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Risk Management</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #333; color: white; padding: 1rem; text-align: center; }
+        nav { background-color: #444; padding: 0.5rem; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
+        nav li { margin: 0 1rem; }
+        nav a { color: white; text-decoration: none; }
+        main { padding: 2rem; }
+        section { margin-bottom: 2rem; }
+        footer { background-color: #333; color: white; text-align: center; padding: 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Security Risk Management</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="14.1.html">Security Risk Management</a></li>
+            <li><a href="14.2.html">Design for Security</a></li>
+            <li><a href="14.3.html">System Survivability</a></li>
+        </ul>
+    </nav>
+   <main>
+        <section id="SecurityRiskManagement">
+            <h2>Welcome to Security Engineering</h2>
+            <p>Security risk assessment and management is essential for effective security engineering. Risk management is concerned with assessing the possible losses that might
+ensue from attacks on assets in the system, and balancing these losses against the costs of security procedures that may reduce these losses. Credit card companies do
+this all the time. It is relatively easy to introduce new technology to reduce credit
+card fraud. However, it is often cheaper for them to compensate users for their losses
+due to fraud than to buy and deploy fraud-reduction technology. As costs drop and
+attacks increase, this balance may change. For example, credit card companies are
+now encoding information on an on-card chip instead of a magnetic strip. This
+makes card copying much more difficult.</p>
+            <p>Risk management is a business issue rather than a technical issue so software
+engineers should not decide what controls should be included in a system. It is up
+to senior management to decide whether or not to accept the cost of security or the
+exposure that results from a lack of security procedures. Rather, the role of software engineers is to provide informed technical guidance and judgment on security issues. They are, therefore, essential participants in the risk management
+process.</p>
+            <p>As I explained in Chapter 12, a critical input to the risk assessment and management process is the organizational security policy. The organizational security policy applies to all systems and should set out what should and should not
+be allowed. The security policy sets out conditions that should always be maintained by a security system and so helps to identify risks and threats that might
+arise. The security policy therefore defines what is and what is not allowed.
+In the security engineering process, you design the mechanisms to implement
+this policy.</p>
+            <p>Risk assessment starts before the decision to acquire the system has been made
+and should continue throughout the system development process and after the system has gone into use (Alberts and Dorofee, 2002). I also introduced, in Chapter 12,
+the idea that this risk assessment is a staged process:
+                <ol>
+                    <li>Preliminary risk assessment At this stage, decisions on the detailed system
+requirements, the system design, or the implementation technology have not
+been made. The aim of this assessment process is to decide if an adequate level
+of security can be achieved at a reasonable cost. If this is the case, you can then
+derive specific security requirements for the system. You do not have information about potential vulnerabilities in the system or the controls that are included
+in reused system components or middleware.</li>
+                    <li>Life-cycle risk assessment This risk assessment takes place during the system
+development life cycle and is informed by the technical system design and
+implementation decisions. The results of the assessment may lead to changes to
+the security requirements and the addition of new requirements. Known and
+potential vulnerabilities are identified and this knowledge is used to inform
+decision making about the system functionality and how it is to be implemented,
+tested, and deployed.</li>
+                    <li>Operational risk assessment After a system has been deployed and put into
+use, risk assessment should continue to take account of how the system is used and proposals for new and changed requirements. Assumptions about
+the operating requirement made when the system was specified may be incorrect. Organizational changes may mean that the system is used in different
+ways from those originally planned. Operational risk assessment therefore
+leads to new security requirements that have to be implemented as the system
+evolves.</li>
+                </ol>
+            <p>Preliminary risk assessment focuses on deriving security requirements. In
+Chapter 12, I show how an initial set of security requirements may be derived from a
+preliminary risk assessment. In this section, I concentrate on life cycle and operational risk assessment to illustrate how the specification and design of a system are
+influenced by technology and the way that the system is used.</p>
+            <p>Preliminary risk assessment focuses on deriving security requirements. In
+Chapter 12, I show how an initial set of security requirements may be derived from a
+preliminary risk assessment. In this section, I concentrate on life cycle and operational risk assessment to illustrate how the specification and design of a system are
+influenced by technology and the way that the system is used.</p>
+            <p>Pfleeger and Pfleeger (2007) characterize threats under four headings, which may
+be used as a starting point for identifying possible misuse cases. These headings are
+as follows:
+                <ol>
+                    <li>Interception threats that allow an attacker to gain access to an asset. So, a possible misuse case for the MHC-PMS might be a situation where an attacker gains
+access to the records of an individual celebrity patient.</li>
+                    <li>Interruption threats that allow an attacker to make part of the system unavailable. Therefore, a possible misuse case might be a denial of service attack on a
+system database server.</li>
+                    <li>Modification threats that allow an attacker to tamper with a system asset. In the
+MHC-PMS, this could be represented by a misuse case where an attacker
+changes the information in a patient record.</li>
+                    <li>Fabrication threats that allow an attacker to insert false information into a system. This is perhaps not a credible threat in the MHC-PMS but would certainly
+be a threat in a banking system, where false transactions might be added to the
+system that transfer money to the perpetrator’s bank account.</li>
+                </ol>
+            <p>Misuse cases are not just useful in preliminary risk assessment but may be used
+for security analysis in life-cycle risk analysis and operational risk analysis. They
+provide a useful basis for playing out hypothetical attacks on the system and assessing the security implications of design decisions that have been made.</p>
+            <p>Based on organizational security policies, preliminary risk assessment should identify the most important security requirements for a system. These reflect how the
+security policy should be implemented in that application, identify the assets to be
+protected, and decide what approach should be used to provide that protection.
+However, maintaining security is about paying attention to detail. It is impossible for
+the initial security requirements to take all details that affect security into account.</p>
+            <p>Life-cycle risk assessment identifies the design and implementation details that
+affect security. This is the important distinction between life-cycle risk assessment
+and preliminary risk assessment. Life-cycle risk assessment affects the interpretation
+of existing security requirements, generates new requirements, and influences the
+overall design of the system.</p>
+            <p>When assessing risks at this stage, you should have much more detailed information
+about what needs to be protected, and you also will know something about the vulnerabilities in the system. Some of these vulnerabilities will be inherent in the design choices
+made. For example, a vulnerability in all password-based systems is that an authorized
+user reveals their password to an unauthorized user. Alternatively, if an organization has
+a policy of developing software in C, you will know that the application may have vulnerabilities because the language does not include array bound checking.</p>
+            <p>Security risk assessment should be part of all life-cycle activities from requirements engineering to system deployment. The process followed is similar to the preliminary risk assessment process with the addition of activities concerned with
+design vulnerability identification and assessment. The outcome of the risk assessment is a set of engineering decisions that affect the system design or implementation, or limit the way in which it is used.</p>
+            <p>A model of the life-cycle risk analysis process, based on the preliminary risk
+analysis process that I described in Figure 12.9, is shown in Figure 14.2. The most important difference between these processes is that you now have information
+about information representation and distribution and the database organization for
+the high-level assets that have to be protected. You are also aware of important
+design decisions such as the software to be reused, infrastructure controls and protection, etc. Based on this information, your analysis identifies changes to the security requirements and the system design to provide additional protection for the
+important system assets.</p>
+            <p>Two examples illustrate how protection requirements are influenced by decisions
+on information representation and distribution:</p>
+                <ol>
+                    <li>You may make a design decision to separate personal patient information and
+information about treatments received, with a key linking these records. The
+treatment information is much less sensitive than the personal patient information so may not need as extensive protection. If the key is protected, then an
+attacker will only be able to access routine information, without being able to
+link this to an individual patient.</li>
+                    <li>Assume that, at the beginning of a session, a design decision is made to copy
+patient records to a local client system. This allows work to continue if the
+server is unavailable. It makes it possible for a health-care worker to access
+patient records from a laptop, even if no network connection is available.
+However, you now have two sets of records to protect and the client copies are
+subject to additional risks, such as theft of the laptop computer. You, therefore,
+have to think about what controls should be used to reduce risk. For example,
+client records on the laptop may have to be encrypted.</li>
+                </ol>
+            <p>To illustrate how decisions on development technologies influence security,
+assume that the health-care provider has decided to build a MHC-PMS using an offthe-shelf information system for maintaining patient records. This system has to be
+configured for each type of clinic in which it is used. This decision has been made
+because it appears to offer the most extensive functionality for the lowest development cost and fastest deployment time.</p>
+            <p>When you develop an application by reusing an existing system, you have to
+accept the design decisions made by the developers of that system. Let us assume
+that some of these design decisions are as follows:</p>
+                <ol>
+                    <li>System users are authenticated using a login name/password combination. No
+other authentication method is supported.</li>
+                    <li>The system architecture is client-server, with clients accessing data through a
+standard web browser on a client PC.</li>
+                    <li>Information is presented to users as an editable web form. They can change
+information in place and upload the revised information to the server.</li>
+                </ol>
+            <p>For a generic system, these design decisions are perfectly acceptable, but a lifecycle risk analysis reveals that they have associated vulnerabilities. Once vulnerabilities have been identified, you then have to make a decision on
+what steps that you can take to reduce the associated risks. This will often involve
+making decisions about additional system security requirements or the operational
+process of using the system. I don’t have space here to discuss all the requirements
+that might be proposed to address the inherent vulnerabilities, but some examples of
+requirements might be the following:</p>
+                <ol>
+                    <li>A password checker program shall be made available and shall be run daily.
+User passwords that appear in the system dictionary shall be identified and users
+with weak passwords reported to system administrators.</li>
+                    <li>Access to the system shall only be allowed to client computers that have been
+approved and registered with the system administrators.</li>
+                    <li>All client computers shall have a single web browser installed as approved by
+system administrators.</li>
+                </ol>
+            <p>As an off-the-shelf system is used, it isn’t possible to include a password checker in
+the application system itself, so a separate system must be used. Password checkers analyze the strength of user passwords when they are set up, and notify users if they have
+chosen weak passwords. Therefore, vulnerable passwords can be identified reasonably quickly after they have been set up, and action can then be taken to ensure that users
+change their password.</p>
+            <p>The second and third requirements mean that all users will always access the system through the same browser. You can decide what is the most secure browser when
+the system is deployed and install that on all client computers. Security updates are
+simplified because there is no need to update different browsers when security vulnerabilities are discovered and fixed.</p>
+
+        <h2>Operational risk management</h2>
+        <p>Security risk assessment should continue throughout the lifetime of the system to
+identify emerging risks and system changes that may be required to cope with these
+risks. This process is called operational risk assessment. New risks may emerge
+because of changing system requirements, changes in the system infrastructure, or
+changes in the environment in which the system is used.</p>
+        <p>The process of operational risk assessment is similar to the life-cycle risk assessment process, but with the addition of further information about the environment in
+which the system is used. The environment is important because characteristics of
+the environment can lead to new risks to the system. For example, say a system is
+being used in an environment in which users are frequently interrupted. A risk is that
+the interruption will mean that the user has to leave their computer unattended. It
+may then be possible for an unauthorized person to gain access to the information in
+the system. This could then generate a requirement for a password-protected screen
+saver to be run after a short period of inactivity.</p>
+
+
+</body>
+</html>

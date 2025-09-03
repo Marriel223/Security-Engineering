@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Engineering Homepage</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #333; color: white; padding: 1rem; text-align: center; }
+        nav { background-color: #444; padding: 0.5rem; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
+        nav li { margin: 0 1rem; }
+        nav a { color: white; text-decoration: none; }
+        main { padding: 2rem; }
+        section { margin-bottom: 2rem; }
+        footer { background-color: #333; color: white; text-align: center; padding: 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Security Engineering</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="14.1.html">Security Risk Management</button></li>
+            <li><a href="14.2.html">Design for Security</a></li>
+            <li><a href="14.3.html">System Survivability</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome to Security Engineering</h2>
+            <p>Objectives</p>
+            <ul>
+                <li>Understand the difference between application security and
+infrastructure security.</li>
+                <li>Know how life-cycle risk assessment and operational risk assessment
+are used to understand security issues that affect a system design.</li>
+                <li>Be aware of software architectures and design guidelines for secure
+systems development.</li>
+                <li>Understand the importance of security testing and evaluation in the
+development process.</li>
+            </ul>
+        </section>
+        <section id="Introduction">
+            <h2>Introduction</h2>
+            <p>The widespread use of the Internet in the 1990s introduced a new challenge for software engineers—designing and implementing systems that were secure. As more
+and more systems were connected to the Internet, a variety of different external
+attacks were devised to threaten these systems. The problems of producing dependable systems were hugely increased. Systems engineers had to consider threats from
+malicious and technically skilled attackers as well as problems resulting from accidental mistakes in the development process.</p>
+                <p>It is now essential to design systems to withstand external attacks and to recover from
+such attacks. Without security precautions, it is almost inevitable that attackers will compromise a networked system. They may misuse the system hardware, steal confidential
+data, or disrupt the services offered by the system. System security engineering is therefore an increasingly important aspect of the systems engineering process.</p>
+                <p>Security engineering is concerned with the development and evolution of systems
+that can resist malicious attacks, which are intended to damage the system or its data.
+Software security engineering is part of the more general field of computer security.
+This has become a priority for businesses and individuals as more and more criminals try to exploit networked systems for illegal purposes. Software engineers should
+be aware of the security threats faced by systems and ways in which these threats can
+be neutralized.</p>
+                <p>My intention in this chapter is to introduce security engineering to software engineers, with a focus on design issues that affect application security. The chapter is
+not about computer security as a whole and so doesn’t cover topics such as encryption, access control, authorization mechanisms, viruses and Trojan horses, etc. These
+are described in detail in general texts on computer security (Anderson, 2008;
+Bishop, 2005; Pfleeger and Pfleeger, 2007).</p>
+                <p>The majority of external attacks focus on system infrastructures because infrastructure components (e.g., web browsers) are well known and widely available.
+Attackers can probe these systems for weaknesses and share information about vulnerabilities that they have discovered. As many people use the same software,
+attacks have wide applicability. Infrastructure vulnerabilities may lead to attackers
+gaining unauthorized access to an application system and its data.
+In practice, there is an important distinction between application security and
+infrastructure security:</p>
+                    <ol>
+                        <li>Application security is a software engineering problem where software engineers should ensure that the system is designed to resist attacks.</li>
+                        <li>Infrastructure security is a management problem where system managers configure the infrastructure to resist attacks. System managers have to set up the
+infrastructure to make the most effective use of whatever infrastructure security</li>
+                    </ol>
+features are available. They also have to repair infrastructure security vulnerabilities that come to light as the software is used.</li></ol>
+                <p>System security management is not a single task but includes a range of activities
+such as user and permission management, system software deployment and maintenance, and attack monitoring, detection and recovery:</p>
+                    <ol>
+                        <li>User and permission management includes adding and removing users from the
+system, ensuring that appropriate user authentication mechanisms are in place
+and setting up the permissions in the system so that users only have access to the
+resources that they need.</li>
+                        <li>System software deployment and maintenance includes installing system software and middleware and configuring these properly so that security vulnerabilities are avoided. It also involves updating this software regularly with new
+versions or patches, which repair security problems that have been discovered.</li>
+                        <li>Attack monitoring, detection and recovery includes activities which monitor the
+system for unauthorized access, detect, and put in place strategies for resisting
+attacks, and backup activities so that normal operation can be resumed after an
+external attack.</li>
+                    </ol>
+                <p>Security management is vitally important, but it is not usually considered to be part of application security engineering. Rather, application security engineering is concerned with designing a system so that it is as secure as possible, given budget
+and usability constraints. Part of this process is ‘design for management’, where you
+design systems to minimize the chance of security management errors leading to
+successful attacks on the system. For critical control systems and embedded systems, it is normal practice to
+select an appropriate infrastructure to support the application system. For example, embedded system developers usually choose a real-time operating system
+that provides the embedded application with the facilities that it needs. Known
+vulnerabilities and security requirements can be taken into account. This means
+that an holistic approach can be taken to security engineering. Application security requirements may be implemented through the infrastructure or the application itself.
+However, application systems in an organization are usually implemented using
+the existing infrastructure (operating system, database, etc.). Therefore, the risks of
+using that infrastructure and its security features must be taken into account as part
+of the system design process.</p>
+
+                </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch for more information.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Security Engineering. All rights reserved.</p>
+    </footer>
+</body>
+</html>
