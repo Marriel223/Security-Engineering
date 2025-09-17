@@ -5,16 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>14.3 System survivability</title>
+    <link rel="stylesheet" href="style.css"> 
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background-color: #333; color: white; padding: 1rem; text-align: center; }
-        nav { background-color: #444; padding: 0.5rem; }
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
-        nav li { margin: 0 1rem; }
-        nav a { color: white; text-decoration: none; }
-        main { padding: 2rem; }
-        section { margin-bottom: 2rem; }
-        footer { background-color: #333; color: white; text-align: center; padding: 1rem; }
+body {
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F3F4F6; /* light gray background */
+  color: #1E293B; /* dark text for readability */
+}
+
+header {
+  background-color: #203741; /* light blue */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+nav {
+  background-color: #0f1524; /* dark blue for contrast */
+  padding: 0.85rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #36BFFA; /* hover accent */
+}
+
+main {
+  padding: 2rem;
+  background-color: white; /* contrast section from light gray body */
+  margin: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #1E3A8A; /* dark blue headings */
+  border-bottom: 2px solid #36BFFA;
+  padding-bottom: 0.5rem;
+  text-align: center; /* center title */
+}
+
+.author {
+  color: #1E3A8A; /* same as heading */
+  text-align: center; /* center align */
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+footer {
+  background-color: #0c283d; /* lighter blue */
+  color: #1E293B;
+  text-align: center;
+  padding: 1rem;
+}
     </style>
 </head>
 
@@ -30,6 +98,7 @@
         </ul>
     </nav>
     </header>
+     <p class="author">Written by: MARRIEL B.DASTAS</p>
 
     <main>
         <p> &nbsp;So far, I have discussed security engineering from the perspective of an application that is
@@ -436,7 +505,12 @@
                 </li>
             </ol>
         </section>
-    </main>
+     </main>
+    <footer>
+        <p>&copy; <a href="https://github.com/FireFlyDeveloper">Saludes, </a> <a href="https://github.com/CDTdavidhaboc">Haboc, </a> <a href="https://github.com/AxelBunsay">Bunsay, </a> <a href="https://github.com/Marriel223">Dastas</a></p>
+    </footer>
+</body>
+</html>
 </body>
 
-</html>
+</html
